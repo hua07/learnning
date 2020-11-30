@@ -1,8 +1,7 @@
-li = [1,3,4,'alex',[3,7,8,'TaiBai'],5,'RiTiAn']
-#循环打印列表中的所有元素，遇到小列表再循环打印它里面的元素。
-for i in li:
-    if type(i) != list:
-        print(i)
-    else:
-        for m in i:
-            print(m)
+l1 = [1, 2, 3, [22, 33]]
+l2 = l1
+l1.append(666)
+print(l1,l2)#他们两个都会改变，因为他们的id地址是一样的
+print(id(l1))
+print(id(l2))
+print(l1 is l2)
