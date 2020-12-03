@@ -1,9 +1,4 @@
-word = 'hello,世界'
-new_word = word.encode('gbk')
-print(new_word)
-
-#非unicode编码之间的转换
-word1 = new_word.decode('gbk')
-print(word1)
-word2 = word1.encode('utf-8')
-print(word2)
+lst = [4, 3, 1, 2, 0, 8, 5, 9, 6, 10]
+for i in range(11):
+    if i not in lst:
+        print(i)

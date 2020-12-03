@@ -136,11 +136,41 @@ for i in li:
 new_li.append(word)
 print(new_li) """
 
-li = [1, 3, 4, 'alex', [3, 7, 8, 'TaiBai'], 5, 'RiTiAn']
-#循环打印列表中的所有元素，遇到小列表再循环打印它里面的元素。
-for i in li:
-    if type(i) != list:
-        print(i)
-    else:
-        for m in i:
-            print(m)
+# li = [1, 3, 4, 'alex', [3, 7, 8, 'TaiBai'], 5, 'RiTiAn']
+# #循环打印列表中的所有元素，遇到小列表再循环打印它里面的元素。
+# for i in li:
+#     if type(i) != list:
+#         print(i)
+#     else:
+#         for m in i:
+#             print(m)
+
+#已知一个列表
+# lst = [1, 2, 3, 4, 5]
+
+# # 求列表的长度
+# lenth = len(lst)
+# print(lenth)
+# # 判断6 是否在列表中
+# print(6 in lst)
+# # lst + [6, 7, 8] 的结果是什么？
+# new_li = lst + [6, 7, 8]
+# print(new_li)
+# # lst*2 的结果是什么
+# lst1 = lst * 2
+# print(lst1)
+# # 列表里元素的最大值是多少
+# max = max(lst)
+# print(max)
+# # 列表里元素的最小值是多少
+# min = min(lst)
+# print(min)
+# # 列表里所有元素的和是多少
+# total = sum(lst)
+# print(total)
+# # 在索引1的位置新增一个的元素10
+# lst.insert(1, 10)
+# print(lst)
+# # 在列表的末尾新增一个元素20
+# lst.append(20)
+# print(lst)
