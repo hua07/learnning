@@ -1,13 +1,14 @@
-def add(n, i):
-    return n + i
+y_pred = {}
+aid = {}
+for i in 'MTAV':
+    for j in range(6):
+        aid[j] = []
+    y_pred = aid
+print(y_pred)
 
 
-def test():
-    for i in range(4):
-        yield i
-
-
-g = test()
-for n in [3, 11]:   
-    g = (add(n, i) for i in g)
-print(list(g))
+for m in 'MTAV':
+    for j in range(6):
+        print(m, j)
+        y_pred[m][j].append([[1], [2]])
+print(y_pred)
