@@ -24,3 +24,33 @@ print(new_len(s2))
 # return：
 # 1、在代码中是终止函数，返回一个指定对象，
 # 2、如果eturn返回多个元素时，是以元组的形式返回给函数的执行者
+
+
+#初级难度：设计一个重量转换器，输入以'g'为单位代数字后返回换算成'kg'的结果
+def conversion(k):
+    weight = k / 1000
+    return weight
+
+
+s = 7
+new_s = conversion(s)
+print(f's的重量单位换算成kg是{new_s}kg')
+
+
+#中级难度：设计一个求指教三角形斜边长的函数（两条指教边为参数，求最长边如果指教边边长分别为3和4，那么返回的结果为：5
+def trigon_bevelling(a, b):
+    c = (a**2 + b**2)**0.5
+    return c
+
+
+a = 3
+b = 4
+c = trigon_bevelling(a, b)
+print(f'这个直角三角形的斜边长为{c}')
+
+#第二种方法：
+c = lambda a, b: (a**2 + b**2)**0.5
+a = 3
+b = 4
+x = c(a, b)
+print(f'这个直角三角形的斜边长为{x}')
