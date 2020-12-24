@@ -272,3 +272,57 @@ print(func(1, 2))
 # 龟叔本打算将 lambda 和 reduce 都从全局名字空间都移除, 舆论说龟叔不喜欢lambda 和 reduce
 
 # 最后lambda没删除是因为和一个人写信写了好多封,进行交流然后把lambda保住了.
+
+# while模拟for循环内部机制：
+l1 = [1, 2, 3, 4, 5, 6]
+# 1 将可迭代对象转化成迭代器
+obj = iter(l1)
+# 2,利用while循环，next进行取值
+while 1:
+    # 3,利用异常处理终止循环
+    try:
+        print(next(obj))
+    except StopIteration:
+        break
+
+# 给出一个列表，通过循环，向列表中添加1-10
+li = []
+for i in range(1, 11):
+    li.append(i)
+print(li)
+# 如果使用列表推倒式该怎么做呢？
+li = [i for i in range(1, 11)]
+print(li)
+# 将10以内所有的证书的平方写入列表
+l2 = [i**2 for i in range(1, 11)]
+print(l2)
+# 100以内所有的偶数写入列表
+l3 = [i for i in range(2, 101, 2)]
+print(l3)
+# 从python1期到python100期写入列表
+l4 = [f'python{i}期' for i in range(1, 101)]
+print(l4)
+
+# 30以内可以被3整除的数
+l5 = [i for i in range(1, 31) if i % 3 == 0]
+print(l5)
+# 过滤掉长度小于3的字符串列表，并将剩下的转换成大写字母
+l = ['wusir', 'laonanhai', 'aa', 'b', 'taibai']
+new_l = [i.upper() for i in l if len(i) >= 3]
+print(new_l)
+# 找到嵌套列表中名字含有两个e的所有名字
+names = [['Tom', 'Billy', 'Jefferson', 'Andrew', 'Wesley', 'Steven', 'Joe'],
+         ['Alice', 'Jill', 'Ana', 'Wendy', 'Jennifer', 'Sherry', 'Eva']]
+name = [f for i in names for f in i if f.count('e') >= 2]
+print(name)
+
+# 字典推导式
+lst1 = ['jay', 'jj', 'meet']
+lst2 = ['周杰伦', '林俊杰', '郭宝元']
+dic = {lst1[i]: lst2[i] for i in range(len(lst1))}
+print(dic)
+
+#  集合推导式
+lst = [1, 2, 3, -1, -3, -7, 9]
+s = {abs(i) for i in lst}
+print(s)

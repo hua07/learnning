@@ -108,10 +108,14 @@ list4 = []
 for i in list3:
     for j in list4:
         if i['name'] == j['name']:
-            j['hobby_lis'].append(i['hobby'])
+            j['hobby_list'].append(i['hobby'])
             break
-        else:
-            j['name'] = i['name']
-            j['hobby_lis'] = list(i['hobby'], )
+    else:
+        list4.append({
+            'name': i['name'],
+            'hobby_list': [
+                i['hobby'],
+            ]
+        })
 
 print(list4)
