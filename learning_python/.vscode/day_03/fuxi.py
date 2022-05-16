@@ -15,12 +15,10 @@ print(new_name,new_name2) """
         print('登录成功')
         break
     else:
-        print('输入错误，请重新输入')
-"""
+        print('输入错误，请重新输入') """
 
 #检查是否是整型，isdigit返回的数据类型是bool值（True or False)
 """ volue = '777'
 new_volue = volue.isdigit()
 print(new_volue) 
-"""
-
+ """

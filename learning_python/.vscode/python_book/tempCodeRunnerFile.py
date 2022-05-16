@@ -1,33 +1,15 @@
-class User():
-    def __init__(self, first_name, last_name, gender, age):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.gender = gender
-        self.age = age
-        self.login_attempts = 0
-
-    def describe_user(self):
-        print(
-            f'用户姓名{self.first_name} {self.last_name},性别：{self.gender}，年龄：{self.age}'
-        )
-
-    def greet_user(self):
-        print(f'你好，{self.first_name} {self.last_name}')
-    def read_login_attempts(self):
-        print(f'现在共有{self.login_attempts}人尝试登录')
-    def increment_login_attempts(self):
-        self.login_attempts += 1
-    def reset_login_attempts(self):
-        self.login_attempts = 0
-        
-user = User('王','华','男','18')
-user.describe_user()
-user.greet_user()
-user.increment_login_attempts()
-user.read_login_attempts()
-user.increment_login_attempts()
-user.read_login_attempts()
-user.increment_login_attempts()
-user.read_login_attempts()
-user.reset_login_attempts()
-user.read_login_attempts()
+friends = ['zhengke','keke','guaiwan','doudou','jiji','segun','banzhang']
+# jiji 无法参加聚会，但是xiaoshizi可以来
+friends[4] = 'xiaoshizi'
+#还想邀请两位女士，分别添加到列表的开始和末尾
+friends.insert(0,'yuehua')
+friends.append('gcyryr')
+for i in range(len(friends)-2):
+    friend = friends.pop()
+    print('sorry',friend+'由于位置有限，不能和你共进晚餐了')
+print('{}我们依旧可以共进晚餐'.format(friends[0]))
+print('{}我们依旧可以共进晚餐'.format(friends[1]))
+print(friends)
+del friends[0]
+del friends[0]
+print(friends)

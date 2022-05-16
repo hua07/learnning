@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 # while 简单练习
 '''count = 1
@@ -60,10 +59,9 @@ else:
     print('输入错误，再见')
 """
 
-
 #游戏登录界面
 
-""" count = 1
+count = 1
 
 while count <= 3:
     time = 3 - count
@@ -73,12 +71,9 @@ while count <= 3:
         print('欢迎登录')
         break
     else:
-        print('账号或密码错误，请重新输入，还有%s机会'%time)
+        print('账号或密码错误，请重新输入，还有%s机会' % time)
         if time == 0:
             print('今日机会已用完，请明天再试')
             break
-    count += 1  """
-
-
-
-
+    count += 1
+import this
